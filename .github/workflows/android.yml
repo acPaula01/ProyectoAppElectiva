@@ -1,4 +1,3 @@
-
 name: Android CI
 
 on:
@@ -52,4 +51,3 @@ jobs:
       if: ${{ hashFiles('app-debug.apk') != '' }}
       # run: 'gcloud info'
       run: 'gcloud firebase test android run --app app-debug.apk --type robo --device model=MediumPhone.arm,version=30,locale=en,orientation=portrait'
-
