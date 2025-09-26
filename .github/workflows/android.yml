@@ -1,3 +1,5 @@
+Workflow file for this run
+.github/workflows/android.yml at 3164a06
 name: Android CI
 
 on:
@@ -11,49 +13,43 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up JDK 21
-        uses: actions/setup-java@v4
-        with:
-          java-version: '21'
-          distribution: 'temurin'
-          cache: gradle
-
-      - name: Grant execute permission for gradlew
-        if: ${{ hashFiles('gradlew') != '' }}
-        run: chmod +x gradlew
-
-      - name: Build with Gradle
-        if: ${{ hashFiles('build.gradle*') != '' }}
-        run: ./gradlew build
-
-      - name: Upload Testing APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-debug.apk
-          path: app/build/outputs/apk/debug/app-debug.apk
-
+    - uses: actions/checkout@v4
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        cache: gradle
+    - name: Grant execute permission for gradlew
+      if: ${{ hashFiles('gradlew') != '' }}
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      if: ${{ hashFiles('build.gradle*') != '' }}
+      run: ./gradlew build
+    - name: Upload Testing APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-debug.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
   firebase-test-lab:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download APK
-        uses: actions/download-artifact@v4
-        with:
-          name: app-debug.apk
-
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GCP_FIREBASE_CREDENTIALS }}
-
-      - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v2
-
-      - name: Run Robo test in Firebase Test Lab
-        run: |
-          gcloud firebase test android run \
-            --type robo \
-            --app app-debug.apk \
-            --device model=Pixel2,version=30,locale=en,orientation=portrait
+    - name: Download APK
+      uses: actions/download-artifact@v4
+      with:
+        name: app-debug.apk
+    - name: Display structure of downloaded files
+      run: ls -R
+    - id: 'auth'
+      if: ${{ hashFiles('app-debug.apk') != '' }}
+      uses: 'google-github-actions/auth@v2'
+      with:
+        credentials_json: '${{ secrets.GCP_FIREBASE_CREDENTIALS }}'
+    - name: 'Set up Cloud SDK'
+      if: ${{ hashFiles('app-debug.apk') != '' }}
+      uses: 'google-github-actions/setup-gcloud@v2'
+    - name: 'Running tests in Firebase Test Lab'
+      if: ${{ hashFiles('app-debug.apk') != '' }}
+      # run: 'gcloud info'
+      run: 'gcloud firebase test android run --app app-debug.apk --type robo --device model=MediumPhone.arm,version=30,locale=en,orientation=portrait'
