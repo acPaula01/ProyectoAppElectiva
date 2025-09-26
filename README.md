@@ -4,7 +4,7 @@ Violeta Vibes App es una aplicación móvil en Kotlin que busca ofrecer una expe
 La app funciona como un catálogo digital donde los usuarios pueden explorar los productos, visualizar sus detalles,
 agregarlos a un carrito y finalizar el pedido de forma sencilla a través de WhatsApp.
 
-Integrantes: Paula Alejandra Adarme 
+Integrantes: Paula Alejandra Adarme y
              Daniela Amaya
 
 ---
