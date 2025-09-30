@@ -10,8 +10,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.violetavibes"
-        minSdk = 24
-        targetSdk = 36
+        minSdk = 21
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
