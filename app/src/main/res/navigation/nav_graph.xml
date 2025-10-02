@@ -8,26 +8,24 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.violetavibes.ui.home.HomeFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home">
+        <!-- Acción para ir al detalle de producto -->
         <action
             android:id="@+id/action_homeFragment_to_productDetailFragment"
             app:destination="@id/productDetailFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/categoriesFragment"
-        android:name="com.example.violetavibes.ui.home.CategoriesFragment"
-        android:label="Categories"
-        tools:layout="@layout/fragment_categories" />
+
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.example.violetavibes.ui.cart.CartFragment"
-        android:label="Cart"
+        android:label="Carrito"
         tools:layout="@layout/fragment_cart" />
+
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.violetavibes.ui.profile.ProfileFragment"
-        android:label="Profile"
+        android:label="Perfil"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
