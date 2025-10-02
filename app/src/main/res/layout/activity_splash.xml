@@ -8,7 +8,7 @@
     android:padding="32dp"
     tools:context=".ui.auth.SplashActivity">
 
-    <!-- Logo/Imagen Centrada (simulado con un TextView grande para el nombre de la app) -->
+    <!-- Logo/Imagen Centrada  -->
     <TextView
         android:id="@+id/tv_logo"
         android:layout_width="wrap_content"

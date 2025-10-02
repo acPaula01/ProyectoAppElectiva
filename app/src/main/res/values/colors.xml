@@ -13,6 +13,6 @@
     <color name="turquoise_dark">#1DE9B6</color>
 
 
-    <color name="primary_purple">#9C27B0</color>   <!-- igual que purple_500 -->
-    <color name="dark_purple_bg">#4A148C</color>  <!-- igual que violet_dark -->
+    <color name="primary_purple">#9C27B0</color>
+    <color name="dark_purple_bg">#4A148C</color>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Tema principal de Violeta Vibes -->
+    <!-- Tema principal  -->
     <style name="Theme.VioletaVibes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Colores principales -->
         <item name="colorPrimary">@color/purple_500</item>
