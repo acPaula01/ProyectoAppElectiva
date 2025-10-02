@@ -15,7 +15,8 @@ La aplicación tendrá la siguientes pantallas
 
 
 5. Pntalla 4: CARRITO DE COMPRAS
-<img width="149" height="313" alt="image" src="https://github.com/user-attachments/assets/09f38f69-8050-4dae-bc7e-513049949b47" />
+<img width="1024" height="1024" alt="carrito de compras" src="https://github.com/user-attachments/assets/699b4489-95d9-4c18-ace0-ef5dd7b47738" />
+
 
 6. Pntalla 5: PERFIL USUARIO
 <img width="149" height="283" alt="image" src="https://github.com/user-attachments/assets/666d3512-5797-403a-8da6-65958bfb20ad" />
