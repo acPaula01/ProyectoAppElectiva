@@ -7,7 +7,8 @@ La aplicación tendrá la siguientes pantallas
 <img width="142" height="281" alt="image" src="https://github.com/user-attachments/assets/6d7233b2-6fae-4f1f-bf8d-c98933cb484c" />
 
 2. Pntalla 2: PANTALLA PRINCIPAL
-![Imagen de WhatsApp 2025-10-02 a las 13 39 07_e4fd97a6](https://github.com/user-attachments/assets/b12a0c89-8a5d-4bf4-b14b-b77dcd965f27)
+<img width="142" height="281" alt="mockup pantalla inicio" src="https://github.com/user-attachments/assets/85687049-b57b-4dd4-98b9-4b66ceabc41f" />
+
 
 
 3. Pntalla 3: VISUALIZACION PRODUCTO
@@ -15,7 +16,7 @@ La aplicación tendrá la siguientes pantallas
 
 
 5. Pntalla 4: CARRITO DE COMPRAS
-<img width="672" height="1536" alt="a61c5285-3a18-4734-9dad-2b5cbfde1776" src="https://github.com/user-attachments/assets/2a46f80c-f2dc-4bc2-9f7b-f6c67178f60e" />
+<img width="142" height="281" alt="a61c5285-3a18-4734-9dad-2b5cbfde1776" src="https://github.com/user-attachments/assets/2a46f80c-f2dc-4bc2-9f7b-f6c67178f60e" />
 
 
 
