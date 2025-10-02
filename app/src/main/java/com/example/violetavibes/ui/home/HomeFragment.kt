@@ -36,13 +36,22 @@ class HomeFragment : Fragment() {
             Product("Falda Elegante", "$45.000", R.drawable.ic_launcher_background)
         )
 
-
+        // Configuración del Adapter con SafeArgs
         productAdapter = ProductAdapter(sampleProducts) { product ->
 
-            findNavController().navigate(R.id.productDetailFragment)
+            // Usamos SafeArgs para pasar los datos al detalle
+            val action = HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(
+                productName = product.name,
+                productPrice = product.price,
+                productDescription = "Este es un detalle ficticio de ${product.name}",
+                productImage = product.imageRes
+            )
+
+            findNavController().navigate(action)
         }
 
         recyclerProducts.layoutManager = LinearLayoutManager(requireContext())
         recyclerProducts.adapter = productAdapter
     }
 }
+

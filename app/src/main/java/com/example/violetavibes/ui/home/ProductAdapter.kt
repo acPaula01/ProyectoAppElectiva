@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.violetavibes.R
 
+// Modelo de datos
 data class Product(val name: String, val price: String, val imageRes: Int)
 
 class ProductAdapter(
@@ -22,8 +23,11 @@ class ProductAdapter(
 
         init {
             view.setOnClickListener {
-                val product = products[adapterPosition]
-                onItemClick(product)
+                val position = bindingAdapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val product = products[position]
+                    onItemClick(product)
+                }
             }
         }
     }
@@ -43,3 +47,4 @@ class ProductAdapter(
 
     override fun getItemCount() = products.size
 }
+
