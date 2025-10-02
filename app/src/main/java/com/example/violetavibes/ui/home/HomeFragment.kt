@@ -4,12 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.navigation.fragment.findNavController
 import com.example.violetavibes.R
 
 class HomeFragment : Fragment() {
+
+    private lateinit var recyclerProducts: RecyclerView
+    private lateinit var productAdapter: ProductAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,12 +26,23 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Buscar el botón en el layout
-        val btnGoToDetail: Button = view.findViewById(R.id.btnGoToDetail)
+        // Referencia al RecyclerView
+        recyclerProducts = view.findViewById(R.id.recyclerProducts)
 
-        // Acción al hacer clic → navegar al fragmento de detalle
-        btnGoToDetail.setOnClickListener {
+        // Lista de prueba
+        val sampleProducts = listOf(
+            Product("Vestido", "$55.000", R.drawable.ic_launcher_background),
+            Product("Blusa Casual", "$37.000", R.drawable.ic_launcher_background),
+            Product("Falda Elegante", "$45.000", R.drawable.ic_launcher_background)
+        )
+
+
+        productAdapter = ProductAdapter(sampleProducts) { product ->
+
             findNavController().navigate(R.id.productDetailFragment)
         }
+
+        recyclerProducts.layoutManager = LinearLayoutManager(requireContext())
+        recyclerProducts.adapter = productAdapter
     }
 }

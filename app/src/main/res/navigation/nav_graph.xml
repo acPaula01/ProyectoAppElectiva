@@ -10,6 +10,7 @@
         android:name="com.example.violetavibes.ui.home.HomeFragment"
         android:label="Inicio"
         tools:layout="@layout/fragment_home">
+
         <!-- Acción para ir al detalle de producto -->
         <action
             android:id="@+id/action_homeFragment_to_productDetailFragment"
@@ -32,6 +33,21 @@
         android:id="@+id/productDetailFragment"
         android:name="com.example.violetavibes.ui.productdetail.ProductDetailFragment"
         android:label="Detalle"
-        tools:layout="@layout/fragment_product_detail" />
+        tools:layout="@layout/fragment_product_detail">
+
+        <!-- Argumentos que recibirá el detalle -->
+        <argument
+            android:name="productName"
+            app:argType="string" />
+        <argument
+            android:name="productPrice"
+            app:argType="string" />
+        <argument
+            android:name="productDescription"
+            app:argType="string" />
+        <argument
+            android:name="productImage"
+            app:argType="reference" />
+    </fragment>
 
 </navigation>

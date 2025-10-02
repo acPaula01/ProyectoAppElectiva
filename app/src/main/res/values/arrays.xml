@@ -1,0 +1,8 @@
+<resources>
+    <string-array name="product_sizes">
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+    </string-array>
+</resources>

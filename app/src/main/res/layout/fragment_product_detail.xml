@@ -1,78 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@android:color/white">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del producto"
+        android:textSize="20sp"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio"
+        android:textSize="18sp"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/productDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripción del producto"
+        android:paddingTop="8dp" />
+
+      <Spinner
+        android:id="@+id/spinnerSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:entries="@array/product_sizes" />
 
-        <!-- Imagen del producto -->
-        <ImageView
-            android:id="@+id/productImage"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background"/>
+     <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Añadir al carrito"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
 
-        <!-- Nombre -->
-        <TextView
-            android:id="@+id/productName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vestido Floral Violeta"
-            android:textColor="#6A0DAD"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="12dp"/>
-
-        <!-- Descripción -->
-        <TextView
-            android:id="@+id/productDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vestido ligero y fresco para verano..."
-            android:textSize="14sp"
-            android:layout_marginTop="8dp"/>
-
-        <!-- Precio -->
-        <TextView
-            android:id="@+id/productPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$45.99"
-            android:textColor="#6A0DAD"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginTop="12dp"/>
-
-        <!-- Selector de talla -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Talla"
-            android:textStyle="bold"
-            android:textColor="#6A0DAD"
-            android:layout_marginTop="16dp"/>
-
-        <Spinner
-            android:id="@+id/spinnerSize"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <!-- Botón agregar al carrito -->
-        <Button
-            android:id="@+id/btnAddToCart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Agregar al carrito"
-            android:backgroundTint="#6A0DAD"
-            android:textColor="@android:color/white"
-            android:layout_marginTop="20dp"
-            android:padding="12dp"/>
-
-    </LinearLayout>
-</ScrollView>

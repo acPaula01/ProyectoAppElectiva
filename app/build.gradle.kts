@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-
+    alias(libs.plugins.androidx.navigation.safeargs)
 }
 
 android {
@@ -52,8 +52,8 @@ dependencies {
     implementation(libs.androidx.fragment)
     implementation(libs.material)
 
-    // ✅ Navigation con XML + Fragments
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    // ✅ Navigation con XML + Fragments (usa el catalog para fragment)
+    implementation(libs.androidx.navigation.fragment)
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     // Tests
