@@ -7,7 +7,8 @@ La aplicación tendrá la siguientes pantallas
 <img width="142" height="281" alt="image" src="https://github.com/user-attachments/assets/6d7233b2-6fae-4f1f-bf8d-c98933cb484c" />
 
 2. Pntalla 2: PANTALLA PRINCIPAL
-<img width="141" height="327" alt="image" src="https://github.com/user-attachments/assets/71b5d8b7-d521-4248-95d7-74735d17729a" />
+<img width="704" height="1472" alt="mockup pantalla inicio" src="https://github.com/user-attachments/assets/f994f3f3-5d53-4cf1-9f8c-92180a2b7d2e" />
+
 
 3. Pntalla 3: VISUALIZACION PRODUCTO
 <img width="137" height="323" alt="image" src="https://github.com/user-attachments/assets/0d178162-eb53-4098-9902-0f4f423288b2" />
