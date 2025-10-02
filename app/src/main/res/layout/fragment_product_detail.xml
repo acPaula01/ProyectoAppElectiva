@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/productImage"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="403dp"
         android:scaleType="centerCrop" />
 
     <TextView
@@ -34,17 +34,18 @@
         android:text="Descripción del producto"
         android:paddingTop="8dp" />
 
-      <Spinner
+    <Spinner
         android:id="@+id/spinnerSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/product_sizes" />
 
-     <Button
+    <Button
         android:id="@+id/btnAddToCart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Añadir al carrito"
         android:layout_marginTop="16dp"/>
 </LinearLayout>
+
 

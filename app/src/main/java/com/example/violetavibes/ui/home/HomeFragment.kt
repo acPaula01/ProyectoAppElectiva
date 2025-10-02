@@ -31,9 +31,9 @@ class HomeFragment : Fragment() {
 
         // Lista de prueba
         val sampleProducts = listOf(
-            Product("Vestido", "$55.000", R.drawable.ic_launcher_background),
-            Product("Blusa Casual", "$37.000", R.drawable.ic_launcher_background),
-            Product("Falda Elegante", "$45.000", R.drawable.ic_launcher_background)
+            Product("Vestido", "$55.000", R.drawable.imgvestido),
+            Product("Blusa ", "$37.000", R.drawable.imgblusavioleta),
+            Product("Falda ", "$65.000", R.drawable.imgfalda)
         )
 
         // Configuración del Adapter con SafeArgs
@@ -43,7 +43,7 @@ class HomeFragment : Fragment() {
             val action = HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(
                 productName = product.name,
                 productPrice = product.price,
-                productDescription = "Este es un detalle ficticio de ${product.name}",
+                productDescription = "Este es un detalle de ${product.name}",
                 productImage = product.imageRes
             )
 
