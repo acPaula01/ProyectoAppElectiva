@@ -54,7 +54,7 @@ dependencies {
 
     // ✅ Navigation con XML + Fragments (usa el catalog para fragment)
     implementation(libs.androidx.navigation.fragment)
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.9.5")
 
     // Tests
     testImplementation(libs.junit)
