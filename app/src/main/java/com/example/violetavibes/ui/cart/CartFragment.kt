@@ -17,6 +17,7 @@ class CartFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var tvTotal: TextView
     private lateinit var btnCheckout: Button
+    private lateinit var adapter: CartAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,16 +31,16 @@ class CartFragment : Fragment() {
         btnCheckout = view.findViewById(R.id.btnCheckout)
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = CartAdapter(CartManager.getCartItems())
+        adapter = CartAdapter(CartManager.getCartItems().toMutableList()) {
+            updateTotal()
+        }
+        recyclerView.adapter = adapter
 
-        // Mostrar el total
         updateTotal()
 
-        // Acción del botón de pago
         btnCheckout.setOnClickListener {
-            // Lógica para navegar a una pantalla de pago o mostrar un mensaje
             CartManager.clearCart()
-            recyclerView.adapter?.notifyDataSetChanged()
+            adapter.notifyDataSetChanged()
             updateTotal()
         }
 

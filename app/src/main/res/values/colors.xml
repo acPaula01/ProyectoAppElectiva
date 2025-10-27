@@ -12,7 +12,7 @@
     <color name="violet_dark">#4A148C</color>
     <color name="turquoise_dark">#1DE9B6</color>
 
-
+    <color name="tint">#6A0DAD</color>
     <color name="primary_purple">#9C27B0</color>
     <color name="dark_purple_bg">#4A148C</color>
 </resources>

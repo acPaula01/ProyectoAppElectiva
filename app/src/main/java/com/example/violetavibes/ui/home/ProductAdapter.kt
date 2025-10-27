@@ -16,6 +16,9 @@ class ProductAdapter(
     private val onItemClick: (Product) -> Unit
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
+    // Lista interna filtrada
+    private var filteredProducts: MutableList<Product> = products.toMutableList()
+
     inner class ProductViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val productImage: ImageView = view.findViewById(R.id.itemProductImage)
         val productName: TextView = view.findViewById(R.id.itemProductName)
@@ -25,7 +28,7 @@ class ProductAdapter(
             view.setOnClickListener {
                 val position = bindingAdapterPosition
                 if (position != RecyclerView.NO_POSITION) {
-                    val product = products[position]
+                    val product = filteredProducts[position]
                     onItemClick(product)
                 }
             }
@@ -39,12 +42,22 @@ class ProductAdapter(
     }
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-        val product = products[position]
+        val product = filteredProducts[position]
         holder.productName.text = product.name
         holder.productPrice.text = product.price
         holder.productImage.setImageResource(product.imageRes)
     }
 
-    override fun getItemCount() = products.size
+    override fun getItemCount() = filteredProducts.size
+
+    // Filtrar productos por nombre
+    fun filter(query: String) {
+        filteredProducts = if (query.isEmpty()) {
+            products.toMutableList()
+        } else {
+            products.filter { it.name.contains(query, ignoreCase = true) }.toMutableList()
+        }
+        notifyDataSetChanged()
+    }
 }
 
