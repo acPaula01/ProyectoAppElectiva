@@ -27,10 +27,8 @@ class ProfileFragment : Fragment() {
     private lateinit var saveButton: Button
     private lateinit var toggleEditButton: TextView
     private lateinit var profileImageView: ShapeableImageView
-    // ✅ INICIO: Declaración de nuevas variables
     private lateinit var profileNameTextView: TextView
     private lateinit var profileEmailTextView: TextView
-    // ✅ FIN: Declaración de nuevas variables
 
     private var isEditMode = false
 
@@ -55,24 +53,24 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // --- 1. Inicialización del ViewModel ---
+        // Inicialización del ViewModel ---
         val dao = AppDatabase.getDatabase(requireContext()).appDao()
         val factory = ProfileViewModelFactory(dao)
         viewModel = ViewModelProvider(this, factory).get(ProfileViewModel::class.java)
 
-        // --- 2. Inicialización de Vistas ---
+        // Inicialización de Vistas ---
         nameEditText = view.findViewById(R.id.etFullName)
         emailEditText = view.findViewById(R.id.etEmail)
         phoneEditText = view.findViewById(R.id.etPhone)
         saveButton = view.findViewById(R.id.btnSaveProfile)
         toggleEditButton = view.findViewById(R.id.btnToggleEdit)
         profileImageView = view.findViewById(R.id.ivProfileImage)
-        // ✅ INICIO: Inicialización de nuevas vistas
+        // Inicialización de nuevas vistas
         profileNameTextView = view.findViewById(R.id.tvProfileName)
         profileEmailTextView = view.findViewById(R.id.tvProfileEmail)
-        // ✅ FIN: Inicialización de nuevas vistas
+        // Inicialización de nuevas vistas
 
-        // --- 3. Observación de Datos ---
+        //  Observación de Datos
         viewModel.user.observe(viewLifecycleOwner) { userEntity ->
             if (userEntity != null) {
                 // Actualiza los campos de texto del formulario
@@ -80,10 +78,10 @@ class ProfileFragment : Fragment() {
                 if (emailEditText.text.toString() != userEntity.email) emailEditText.setText(userEntity.email)
                 if (phoneEditText.text.toString() != userEntity.phone) phoneEditText.setText(userEntity.phone)
 
-                // ✅ INICIO: Actualización de los textos debajo de la foto
+                //  Actualización de los textos debajo de la foto
                 profileNameTextView.text = userEntity.name.ifEmpty { "Nombre de Usuario" }
                 profileEmailTextView.text = userEntity.email.ifEmpty { "usuario@email.com" }
-                // ✅ FIN: Actualización de los textos debajo de la foto
+                // Actualización de los textos debajo de la foto
 
                 // Carga la imagen desde la URI guardada en la base de datos
                 if (!userEntity.imageUri.isNullOrEmpty()) {
@@ -99,7 +97,7 @@ class ProfileFragment : Fragment() {
             }
         }
 
-        // --- 4. Configuración de Eventos ---
+        // Configuración de Eventos
         toggleEditButton.setOnClickListener {
             isEditMode = !isEditMode
             updateUiForEditMode()
@@ -123,11 +121,9 @@ class ProfileFragment : Fragment() {
                 Toast.makeText(requireContext(), "Pulsa 'Editar' para cambiar la foto", Toast.LENGTH_SHORT).show()
             }
         }
-
-        // --- 5. Estado Inicial de la UI ---
+        //  Estado Inicial de la UI ---
         updateUiForEditMode()
     }
-
     private fun updateUiForEditMode() {
         if (isEditMode) {
             toggleEditButton.text = "Cancelar"

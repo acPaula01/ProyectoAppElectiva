@@ -1,0 +1,31 @@
+[33ma14f4b3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m base de datos
+[33m6abf7a8[m creacion base de datos
+[33m4bcc871[m cambios de funcionalidades
+[33m8c6fa28[m correccion perfil del usuario
+[33mbe0595b[m Update ui.md
+[33m5f441d5[m Update ui.md
+[33mb5e996c[m Update ui.md
+[33m85c2e83[m Update ui.md
+[33md496bb9[m Update ui.md
+[33m1f77ab0[m Update ui.md
+[33m3771b03[m funcionalidad carrito
+[33m29f6628[m detalle de producto funcional
+[33mc5fede9[m arreglos detalle producto
+[33mc047ffc[m navegación, funcion detalle producto
+[33m4ffb789[m detalles nav y barra inferior
+[33mdbdff1d[m actualizacion pestaña inicio- se puede navegar
+[33mb70c963[m ultimo avance y errores corregidos, app abre
+[33m7a9c3d9[m Merge pull request #3 from acPaula01/dependabot/gradle/kotlin-2.2.20
+[33m1a5a052[m Merge pull request #1 from acPaula01/dependabot/gradle/androidx-c5db58ba3a
+[33m53b14c9[m prueba
+[33m3357313[m Bump androidx.compose:compose-bom in the androidx group
+[33m61947ec[m Bump kotlin from 2.0.21 to 2.2.20
+[33mb155659[m Subiendo versión actual del proyecto frontend
+[33m1811517[m estructura archivos frontend
+[33m4dea392[m Resolver conflicto en .gitignore
+[33mca5e569[m conexion git
+[33m27b5533[m Update ui.md
+[33m086cbb5[m Update funcionalidades.md
+[33m1111cc7[m Update README.md
+[33m26a443d[m Update README.md
+[33m437098a[m Initial commit

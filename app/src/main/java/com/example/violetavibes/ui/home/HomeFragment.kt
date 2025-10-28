@@ -15,9 +15,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.violetavibes.R
 import com.example.violetavibes.data.AppDatabase
 import com.example.violetavibes.data.ProductEntity
-import com.example.violetavibes.data.ProductAdapter // ✅ RUTA CORREGIDA
+import com.example.violetavibes.data.ProductAdapter
 import kotlinx.coroutines.launch
-// ✅ SOLUCIÓN: El código debe estar dentro de esta clase
 class HomeFragment : Fragment() {
 
     // Declaraciones de las vistas y el adaptador
@@ -33,7 +32,6 @@ class HomeFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
-    // 👇 Pega tu código aquí dentro
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -48,7 +46,7 @@ class HomeFragment : Fragment() {
         recyclerProducts.layoutManager = LinearLayoutManager(requireContext())
 
         lifecycleScope.launch {
-            // Insertar productos de ejemplo si la tabla está vacía
+
             if (dao.getAllProducts().isEmpty()) {
                 val sampleProducts = listOf(
                     ProductEntity(name = "Vestido", price = "$55.000", imageRes = R.drawable.imgvestido),
@@ -62,11 +60,10 @@ class HomeFragment : Fragment() {
             }
 
             // Obtener productos desde la base de datos
-            // CORRECTO
             val productsFromDb = dao.getAllProducts()
 
-            // Ya no se usa la variable 'adapterProducts'. Se pasa la lista directamente.
-            productAdapter = ProductAdapter(productsFromDb) { product -> // 'product' es ahora un ProductEntity
+
+            productAdapter = ProductAdapter(productsFromDb) { product ->
                 val action = HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(
                     productName = product.name,
                     productPrice = product.price,
@@ -84,7 +81,6 @@ class HomeFragment : Fragment() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 lifecycleScope.launch {
-                    // CORRECTO
                     val filtered = if (s.isNullOrEmpty()) {
                         dao.getAllProducts()
                     } else {
