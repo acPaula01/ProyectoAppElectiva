@@ -15,12 +15,12 @@ La aplicación tendrá la siguientes pantallas
 <img width="142" height="281" alt="Mockup detalle de producto" src="https://github.com/user-attachments/assets/99525f39-66b3-4509-9a75-67ad1fcc13a4" />
 
 
-5. Pntalla 4: CARRITO DE COMPRAS
+4. Pntalla 4: CARRITO DE COMPRAS
 <img width="142" height="281" alt="a61c5285-3a18-4734-9dad-2b5cbfde1776" src="https://github.com/user-attachments/assets/2a46f80c-f2dc-4bc2-9f7b-f6c67178f60e" />
 
 
 
-6. Pntalla 5: PERFIL USUARIO
+5. Pntalla 5: PERFIL USUARIO
 <img width="142" height="281" alt="image" src="https://github.com/user-attachments/assets/666d3512-5797-403a-8da6-65958bfb20ad" />
 
 
