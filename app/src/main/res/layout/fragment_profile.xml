@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- Barra de Título -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,140 +27,125 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/btnEditProfile"
+                android:id="@+id/btnToggleEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="8dp"
                 android:text="Editar"
                 android:textColor="@color/purple_700"
-                android:textStyle="bold"
-                android:layout_alignParentEnd="true" />
+                android:textStyle="bold" />
         </RelativeLayout>
 
-        <!-- Tarjeta del perfil -->
+        <!-- Contenedor Principal del Perfil -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="517dp"
             android:background="@drawable/bg_profile_card"
-            android:orientation="vertical"
-            android:padding="24dp"
             android:elevation="6dp"
-            android:translationZ="6dp"
-            android:layout_marginBottom="40dp">
+            android:orientation="vertical"
+            android:padding="24dp">
 
-            <!-- Imagen -->
-            <LinearLayout
-                android:layout_width="match_parent"
+            <!-- Imagen de perfil clickeable -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile"
+                app:shapeAppearanceOverlay="@style/CircularImageView" />
+
+            <!--   TEXTOS DEBAJO DE LA FOTO -->
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:text="Nombre de Usuario"
+                android:textColor="@color/purple_700"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/profileImage"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_profile"
-                    android:scaleType="centerCrop"
-                    app:shapeAppearanceOverlay="@style/CircularImageView" />
-            </LinearLayout>
+            <TextView
+                android:id="@+id/tvProfileEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:text="usuario@email.com"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+            <!-- ✅ FIN: TEXTOS DEBAJO DE LA FOTO -->
 
             <!-- Nombre -->
             <TextView
-                android:id="@+id/profileName"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="María López"
+                android:text="Nombre completo"
                 android:textColor="@color/purple_700"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:layout_marginTop="12dp" />
+                android:textStyle="bold" />
 
-            <!-- Correo -->
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="Tu nombre completo"
+                android:padding="10dp" />
+
+            <!-- Correo electrónico -->
             <TextView
-                android:id="@+id/profileEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo electrónico"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="maria.lopez@email.com"
-                android:textColor="#888888"
-                android:textSize="14sp"
-                android:gravity="center"
-                android:layout_marginBottom="20dp" />
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="tu.correo@email.com"
+                android:inputType="textEmailAddress"
+                android:padding="10dp" />
 
-            <!-- Campos -->
-            <LinearLayout
+            <!-- Teléfono -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teléfono"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/white"
-                android:padding="16dp"
-                android:layout_marginTop="8dp"
-                android:elevation="4dp"
-                android:layout_marginBottom="16dp"
-                android:backgroundTintMode="src_over"
-                android:backgroundTint="@color/white"
-                android:clipToOutline="true">
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="+57 3001234567"
+                android:inputType="phone"
+                android:padding="10dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nombre completo"
-                    android:textColor="@color/purple_700"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/etFullName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_input_field"
-                    android:hint="María López"
-                    android:padding="10dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="12dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Correo electrónico"
-                    android:textColor="@color/purple_700"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/etEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_input_field"
-                    android:hint="maria.lopez@email.com"
-                    android:padding="10dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="12dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Teléfono"
-                    android:textColor="@color/purple_700"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/etPhone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_input_field"
-                    android:hint="+57 3001234567"
-                    android:padding="10dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="20dp" />
-            </LinearLayout>
-
-            <!-- Botón -->
+            <!-- Botón de Guardar (inicialmente oculto) -->
             <Button
                 android:id="@+id/btnSaveProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Guardar cambios"
                 android:background="@drawable/bg_button_rounded"
+                android:padding="12dp"
+                android:text="Guardar cambios"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:padding="12dp" />
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
