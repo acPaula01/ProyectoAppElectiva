@@ -77,7 +77,7 @@ dependencies {
 
     // ⚙ Fix de compatibilidad con Kotlin (evita errores de metadata)
     implementation("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.7.0")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.9.22")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:2.2.21")
 
     // 🔹 Librerías para testing
     testImplementation(libs.junit)
