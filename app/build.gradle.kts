@@ -68,7 +68,7 @@ dependencies {
     kapt("androidx.room:room-compiler:$room_version")
 
 
-    val coroutines_version = "1.9.0" // Versión estable y reciente
+    val coroutines_version = "1.10.2" // Versión estable y reciente
 
 // 🟡 Coroutines (para tareas en segundo plano con Room)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
