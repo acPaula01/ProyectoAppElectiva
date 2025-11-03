@@ -53,7 +53,7 @@ dependencies {
     implementation(libs.androidx.fragment)
     implementation(libs.material)
 
-    val nav_version = "2.7.7"
+    val nav_version = "2.9.5"
 
 // 🔹 Navegación entre fragments (con XML)
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
