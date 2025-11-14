@@ -8,7 +8,8 @@ Integrantes: Paula Alejandra Adarme
              Daniela Amaya
 
 ---
-link de la presentación : [Uploading violeta vibes.pdf…]()
+link de la presentación : [violeta vibes.pdf](https://github.com/user-attachments/files/23538719/violeta.vibes.pdf)
+
 
 ## 📌 Contenido del repositorio
 
