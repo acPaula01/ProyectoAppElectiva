@@ -8,7 +8,7 @@ Integrantes: Paula Alejandra Adarme
              Daniela Amaya
 
 ---
-
+link de la presentación : https://www.canva.com/design/DAG4of7ckFU/rap9YhX8ZvhmdUJCCNQKXg/edit?utm_content=DAG4of7ckFU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 ## 📌 Contenido del repositorio
 
 - [Ideas iniciales de proyecto](docs/ideas.md)
@@ -34,3 +34,4 @@ El objetivo principal es construir una aplicación móvil que permita a los usua
 - **IDE:** Android Studio
   
 ---
+
