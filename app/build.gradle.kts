@@ -53,7 +53,7 @@ dependencies {
     implementation(libs.androidx.fragment)
     implementation(libs.material)
 
-    val nav_version = "2.7.7"
+    val nav_version = "2.9.6"
 
 // 🔹 Navegación entre fragments (con XML)
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
@@ -61,7 +61,7 @@ dependencies {
 
 
 // 🟣 Base de datos Room (para guardar info local)
-    val room_version = "2.8.3" // La versión estable más reciente. [1]
+    val room_version = "2.8.4" // La versión estable más reciente. [1]
 
     implementation("androidx.room:room-runtime:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
